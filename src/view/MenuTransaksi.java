@@ -10,13 +10,19 @@ public class MenuTransaksi {
     public void menuData(){
         String pilih;
         do {
+            System.out.println("==============================");
+            System.out.println("         TOKO SEPATU          ");
+            System.out.println("            KYONI             ");
+            System.out.println("==============================");
+            System.out.println("            MENU              ");
+            System.out.println("==============================");
             System.out.println("""
-                1. Display Baju
+                1. Display Sepatu
                 2. Beli
                 3. Struct Pembeli
-                4. Keluar
+                4. Back to Login
                 """);
-            System.out.print("Masukkan Pilihan = ");
+            System.out.print("Choice Input : ");
             pilih = input.nextLine();
             
             switch (pilih) {

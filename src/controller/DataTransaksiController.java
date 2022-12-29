@@ -2,7 +2,7 @@ package controller;
 
 import entity.PengunjungEntity;
 import entity.TransaksiEntity;
-import model.DataBajuModel;
+import model.DataSepatuModel;
 import model.DataTransaksiModel;
 import view.DataTransaksiView;
 import view.MenuTransaksi;
@@ -31,7 +31,7 @@ public class DataTransaksiController {
     }
 
     public boolean cari(String jenis){
-        TransaksiEntity transaksi = DataBajuModel.cari(jenis);
+        TransaksiEntity transaksi = DataSepatuModel.cari(jenis);
         if(transaksi!=null){
             return true;
         }

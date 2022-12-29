@@ -6,7 +6,7 @@ import entity.TransaksiEntity;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class DataBajuModel {
+public class DataSepatuModel {
     static Scanner input = new Scanner(System.in);
     static ArrayList<TransaksiEntity> arrayTransaksi = new ArrayList<>();
     static TransaksiEntity objTransaksi = new TransaksiEntity();

@@ -3,7 +3,7 @@ package view;
 import controller.DataTransaksiController;
 import entity.DataTransaksiEntity;
 import entity.TransaksiEntity;
-import model.DataBajuModel;
+import model.DataSepatuModel;
 import model.DataTransaksiModel;
 
 import java.util.Scanner;
@@ -45,7 +45,7 @@ public class DataTransaksiView implements InterfaceView{
         do {
             System.out.print("Masukkan Jenis         = ");
             jenis = input.nextLine();
-            transaksi = DataBajuModel.cari(jenis);
+            transaksi = DataSepatuModel.cari(jenis);
             if (transaksi!=null) {
                 char pilihSepatuIni = 'n';
 
