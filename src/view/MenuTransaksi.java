@@ -20,7 +20,8 @@ public class MenuTransaksi {
                 1. Display Sepatu
                 2. Beli
                 3. Struct Pembeli
-                4. Back to Login
+                4. clear  Pembelian 
+                5. Back to Login
                 """);
             System.out.print("Choice Input : ");
             pilih = input.nextLine();
@@ -29,9 +30,10 @@ public class MenuTransaksi {
                 case "1" -> dataTransaksiController.displayTtoMenu();
                 case "2" -> dataTransaksiController.inputToMenu();
                 case "3" -> dataTransaksiController.displayDtoMenu();
-                case "4" -> System.out.println();
+                case "4" -> dataTransaksiController.hapusdata();
+                case "5" -> System.out.println();
                 default -> System.err.println("inputan tidak ada");
             }
-        }while (!pilih.equals("4"));
+        }while (!pilih.equals("5"));
     }
 }

@@ -88,4 +88,16 @@ public class DataTransaksiView implements InterfaceView{
             System.out.println();
         }
     }
+    public void hapusData(){
+        System.out.print("Masukkan Nama Yang Akan Dihapus = ");
+        String nama = input.nextLine();
+        DataTransaksiEntity ObjekData = DataTransaksiModel.dataCari(nama);
+        if(ObjekData!=null){
+            data.hapus(nama);
+            System.out.println("Berhasil Dihapus");
+        }
+        else{
+            System.out.println("Nama " + nama + " Tidak Ditemukan");
+        }
+    }
 }

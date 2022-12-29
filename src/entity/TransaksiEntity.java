@@ -3,10 +3,12 @@ package entity;
 public class TransaksiEntity {
     private BarangEntity barang;
     private int harga;
+    private int ukuran;
     private int totalHarga;
 
-    public TransaksiEntity(BarangEntity barang, int harga) {
+    public TransaksiEntity(BarangEntity barang,int ukuran, int harga) {
         this.barang = barang;
+        this.ukuran = ukuran;
         this.harga = harga;
     }
 
@@ -31,4 +33,11 @@ public class TransaksiEntity {
     public void setTotalHarga(int totalHarga) {
         this.totalHarga = totalHarga;
     }
+    public int getUkuran() {
+        return this.ukuran;
+    }
+    public void setUkuran(int ukuran) {
+        this.ukuran = ukuran;
+    }
+
 }
