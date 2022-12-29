@@ -12,8 +12,8 @@ public class DataSepatuModel {
     static TransaksiEntity objTransaksi = new TransaksiEntity();
 
     public static void dataBarang(){
-        arrayTransaksi.add(new TransaksiEntity(new BarangEntity("sneakers", "kulit sapi"), 500000));
-        arrayTransaksi.add(new TransaksiEntity(new BarangEntity("sport", "kulit sapi"), 700000));
+        arrayTransaksi.add(new TransaksiEntity(new BarangEntity("sneakers", "kulit sapi"),45, 500000));
+        arrayTransaksi.add(new TransaksiEntity(new BarangEntity("sport", "kulit sapi"),45, 700000));
     }
 
     public static TransaksiEntity cari(String jenis){

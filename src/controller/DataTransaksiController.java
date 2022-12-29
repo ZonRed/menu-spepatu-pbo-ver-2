@@ -30,6 +30,11 @@ public class DataTransaksiController {
         dataTransaksiView.display();
     }
 
+    public void hapusdata(){
+        DataTransaksiView view = new DataTransaksiView();
+        view.hapusData();
+    }
+
     public boolean cari(String jenis){
         TransaksiEntity transaksi = DataSepatuModel.cari(jenis);
         if(transaksi!=null){
@@ -41,5 +46,8 @@ public class DataTransaksiController {
     }
     public void beli(int id, String nama,String alamat,TransaksiEntity transaksi){
         DataTransaksiModel.beli(new PengunjungEntity( id,nama, alamat), transaksi);
+    }
+    public void hapus(String nama){
+        DataTransaksiModel.hapus(nama);
     }
 }
