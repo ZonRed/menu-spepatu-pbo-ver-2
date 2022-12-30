@@ -76,17 +76,23 @@ public class DataTransaksiView implements InterfaceView{
 
     @Override
     public void display(){
-        for (DataTransaksiEntity dataTransaksi : DataTransaksiModel.all()) {
-            System.out.println();
-            System.out.println("=============================================");
-            System.out.println("Nama Pembeli              = " + dataTransaksi.getPengunjung().getNama());
-            System.out.println("Alamat Pembeli            = " + dataTransaksi.getPengunjung().getAlamat());
-            System.out.println("Jenis Sepatu yang dibeli  = " + dataTransaksi.getTransaksi().getBarang().getJenisSepatu());
-            System.out.println("Bahan Sepatu yang dibeli  = " + dataTransaksi.getTransaksi().getBarang().getBahan());
-            System.out.println("Total Harga               = " + dataTransaksi.getTransaksi().getTotalHarga());
-            System.out.println("=============================================");
-            System.out.println();
+        if(DataTransaksiModel.all().isEmpty()) {
+            System.out.println("data kosong");
         }
+        else{
+            for (DataTransaksiEntity dataTransaksi : DataTransaksiModel.all()) {
+                System.out.println();
+                System.out.println("=============================================");
+                System.out.println("Nama Pembeli              = " + dataTransaksi.getPengunjung().getNama());
+                System.out.println("Alamat Pembeli            = " + dataTransaksi.getPengunjung().getAlamat());
+                System.out.println("Jenis Sepatu yang dibeli  = " + dataTransaksi.getTransaksi().getBarang().getJenisSepatu());
+                System.out.println("Bahan Sepatu yang dibeli  = " + dataTransaksi.getTransaksi().getBarang().getBahan());
+                System.out.println("Total Harga               = " + dataTransaksi.getTransaksi().getTotalHarga());
+                System.out.println("=============================================");
+                System.out.println();
+            }
+        }
+
     }
     public void hapusData(){
         System.out.print("Masukkan Nama Yang Akan Dihapus = ");
