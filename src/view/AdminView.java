@@ -24,10 +24,10 @@ public class AdminView {
                 dataTransaksiController.menuDataToAmin();
             }
             else{
-                System.out.println("Data tidak Ada");
+                System.err.println("Data can't find");
             }
         }catch(Exception e){
-            System.out.println("GAGAL LOGIN");
+            System.err.println("LOGIN error");
         }
     }
 }

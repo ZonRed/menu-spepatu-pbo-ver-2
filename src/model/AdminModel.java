@@ -10,7 +10,6 @@ public class AdminModel {
 
     public static void dataAdmin(){
         arrayAdmin.add(new AdminEntity(1,"Yu", "123"));
-        arrayAdmin.add(new AdminEntity(2,"An",  "234"));
     }
 
     public static ArrayList<AdminEntity> all(){

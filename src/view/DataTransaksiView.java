@@ -30,9 +30,9 @@ public class DataTransaksiView implements InterfaceView{
 
             TransaksiEntity objekTransaksi = pilihSepatu();
             data.beli(Id,Nama,Alamat,objekTransaksi);
-            System.out.println("Data Berhasil Masuk");
+            System.out.println("Data successfully entered");
         }catch(Exception e){
-            System.out.println("Data TIdak Masuk");
+            System.err.println("Data not entered");
         }
         
     }
@@ -51,6 +51,7 @@ public class DataTransaksiView implements InterfaceView{
 
                 System.out.println("=============================================");
                 System.out.println("Jenis Sepatu  = " + transaksi.getBarang().getJenisSepatu());
+                System.out.println("Ukuran Sepatu = " + transaksi.getUkuran());
                 System.out.println("Bahan Sepatu  = " + transaksi.getBarang().getBahan());
                 System.out.println("Harga Sepatu  = " + transaksi.getHarga());
                 System.out.println("=============================================");
@@ -67,7 +68,7 @@ public class DataTransaksiView implements InterfaceView{
                     break;
                 }
             } else {
-                System.err.println("------------ Data TIdak Ditemukan -----------");
+                System.err.println("------------ Can't Find Data -----------");
             }
         } while (pilih == false);
 
@@ -76,17 +77,24 @@ public class DataTransaksiView implements InterfaceView{
 
     @Override
     public void display(){
-        for (DataTransaksiEntity dataTransaksi : DataTransaksiModel.all()) {
-            System.out.println();
-            System.out.println("=============================================");
-            System.out.println("Nama Pembeli              = " + dataTransaksi.getPengunjung().getNama());
-            System.out.println("Alamat Pembeli            = " + dataTransaksi.getPengunjung().getAlamat());
-            System.out.println("Jenis Sepatu yang dibeli  = " + dataTransaksi.getTransaksi().getBarang().getJenisSepatu());
-            System.out.println("Bahan Sepatu yang dibeli  = " + dataTransaksi.getTransaksi().getBarang().getBahan());
-            System.out.println("Total Harga               = " + dataTransaksi.getTransaksi().getTotalHarga());
-            System.out.println("=============================================");
-            System.out.println();
+        if(DataTransaksiModel.all().isEmpty()) {
+            System.err.println("Blank Data");
         }
+        else{
+            for (DataTransaksiEntity dataTransaksi : DataTransaksiModel.all()) {
+                System.out.println();
+                System.out.println("=============== Struct Kyoni ================");
+                System.out.println("Nama Pembeli              = " + dataTransaksi.getPengunjung().getNama());
+                System.out.println("Alamat Pembeli            = " + dataTransaksi.getPengunjung().getAlamat());
+                System.out.println("Jenis Sepatu yang dibeli  = " + dataTransaksi.getTransaksi().getBarang().getJenisSepatu());
+                System.out.println("Ukuran Sepatu yang dibeli = " + dataTransaksi.getTransaksi().getUkuran());
+                System.out.println("Bahan Sepatu yang dibeli  = " + dataTransaksi.getTransaksi().getBarang().getBahan());
+                System.out.println("Total Harga               = " + dataTransaksi.getTransaksi().getTotalHarga());
+                System.out.println("=============================================");
+                System.out.println();
+            }
+        }
+
     }
     public void hapusData(){
         System.out.print("Masukkan Nama Yang Akan Dihapus = ");
@@ -94,7 +102,7 @@ public class DataTransaksiView implements InterfaceView{
         DataTransaksiEntity ObjekData = DataTransaksiModel.dataCari(nama);
         if(ObjekData!=null){
             data.hapus(nama);
-            System.out.println("Berhasil Dihapus");
+            System.out.println("Clear Done");
         }
         else{
             System.out.println("Nama " + nama + " Tidak Ditemukan");

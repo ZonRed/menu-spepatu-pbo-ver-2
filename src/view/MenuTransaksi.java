@@ -32,7 +32,7 @@ public class MenuTransaksi {
                 case "3" -> dataTransaksiController.displayDtoMenu();
                 case "4" -> dataTransaksiController.hapusdata();
                 case "5" -> System.out.println();
-                default -> System.err.println("inputan tidak ada");
+                default -> System.err.println("Wrong input!!!!");
             }
         }while (!pilih.equals("5"));
     }

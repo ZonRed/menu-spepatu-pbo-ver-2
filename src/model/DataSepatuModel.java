@@ -12,8 +12,12 @@ public class DataSepatuModel {
     static TransaksiEntity objTransaksi = new TransaksiEntity();
 
     public static void dataBarang(){
-        arrayTransaksi.add(new TransaksiEntity(new BarangEntity("sneakers", "kulit sapi"),45, 500000));
-        arrayTransaksi.add(new TransaksiEntity(new BarangEntity("sport", "kulit sapi"),45, 700000));
+        arrayTransaksi.add(new TransaksiEntity(new BarangEntity("sneakers1", "kulit sapi"),43, 400000));
+        arrayTransaksi.add(new TransaksiEntity(new BarangEntity("sneakers2", "kulit sapi"),44, 450000));
+        arrayTransaksi.add(new TransaksiEntity(new BarangEntity("sneakers3", "kulit sapi"),45, 500000));
+        arrayTransaksi.add(new TransaksiEntity(new BarangEntity("sport1", "kulit sapi"),43, 600000));
+        arrayTransaksi.add(new TransaksiEntity(new BarangEntity("sport2", "kulit sapi"),44, 650000));
+        arrayTransaksi.add(new TransaksiEntity(new BarangEntity("sport3", "kulit sapi"),45, 700000));
     }
 
     public static TransaksiEntity cari(String jenis){
