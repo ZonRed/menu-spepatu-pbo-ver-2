@@ -9,16 +9,16 @@ public class AdminModel {
     static Scanner input = new Scanner(System.in);
 
     public static void dataAdmin(){
-        arrayAdmin.add(new AdminEntity(1,"Yu", "123"));
+        arrayAdmin.add(new AdminEntity("1","Yu", "123"));
     }
 
     public static ArrayList<AdminEntity> all(){
         return arrayAdmin;
     }
 
-    public static AdminEntity cari(int id,String pass){
+    public static AdminEntity cari(String id,String pass){
         for(AdminEntity objectAdmin : arrayAdmin){
-            if(objectAdmin.getId()==id&&objectAdmin.getPassword().equals(pass)){
+            if(objectAdmin.getId().equals(id)&&objectAdmin.getPassword().equals(pass)){
                 return objectAdmin;
             }
             if(objectAdmin.getPassword()==pass){

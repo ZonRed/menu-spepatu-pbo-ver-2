@@ -10,12 +10,11 @@ public class AdminView {
     AdminController admin = new AdminController();
 
     public void login(){
-        int id;
+        String id;
         String password;
         try{
             System.out.print("Masukkan id       = ");
-            id = input.nextInt();
-            input.nextLine();
+            id = input.nextLine();
             System.out.print("Masukkan Password = ");
             password = input.nextLine();
             boolean status = admin.cari(id, password);

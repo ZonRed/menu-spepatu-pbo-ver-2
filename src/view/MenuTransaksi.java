@@ -20,12 +20,12 @@ public class MenuTransaksi {
                 1. Display Sepatu
                 2. Beli
                 3. Struct Pembeli
-                4. clear  Pembelian 
+                4. clear  Pembelian
                 5. Back to Login
                 """);
             System.out.print("Choice Input : ");
             pilih = input.nextLine();
-            
+
             switch (pilih) {
                 case "1" -> dataTransaksiController.displayTtoMenu();
                 case "2" -> dataTransaksiController.inputToMenu();

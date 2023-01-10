@@ -44,7 +44,7 @@ public class DataTransaksiController {
             return false;
         }
     }
-    public void beli(int id, String nama,String alamat,TransaksiEntity transaksi){
+    public void beli(String id, String nama,String alamat,TransaksiEntity transaksi){
         DataTransaksiModel.beli(new PengunjungEntity( id,nama, alamat), transaksi);
     }
     public void hapus(String nama){

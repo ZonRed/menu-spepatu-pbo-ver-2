@@ -3,7 +3,7 @@ package entity;
 public class PengunjungEntity extends UserEntity {
     private String alamat;
 
-    public PengunjungEntity(int id,String nama, String alamat){
+    public PengunjungEntity(String id,String nama, String alamat){
         super(id, nama);
         this.alamat = alamat;
     }

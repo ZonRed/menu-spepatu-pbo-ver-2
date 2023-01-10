@@ -25,7 +25,7 @@ public class MenuView {
             pilih = input.nextLine();
             
             switch (pilih) {
-                case "1" -> adminController.loginToMenu();
+//                case "1" -> adminController.loginToMenu();
                 case "2" -> System.out.println("Leave...");
                 default -> System.err.print("Wrong input!!!!");
             }

@@ -15,13 +15,12 @@ public class DataTransaksiView implements InterfaceView{
 
     @Override
     public void inputBeli(){
-        int Id;
+        String Id;
         String Nama,Alamat;
         try{
             System.out.println("=============================================");
             System.out.print("Masukkan Id Pembeli            = ");
-            Id = input.nextInt();
-            input.nextLine();
+            Id = input.nextLine();
             System.out.print("Masukkan Atas Nama Pembeli     = ");
             Nama = input.nextLine();
             System.out.print("Masukkan Alamat Pembeli        = ");
@@ -34,7 +33,7 @@ public class DataTransaksiView implements InterfaceView{
         }catch(Exception e){
             System.err.println("Data not entered");
         }
-        
+
     }
 
     private TransaksiEntity pilihSepatu(){

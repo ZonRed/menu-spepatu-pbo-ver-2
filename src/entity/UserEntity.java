@@ -2,18 +2,18 @@ package entity;
 
 public abstract class UserEntity {
     private String nama;
-    private int id;
-    public UserEntity(int id,String nama) {
+    private String id;
+    public UserEntity(String id,String nama) {
         this.id = id;
         this.nama = nama;
     }
     public UserEntity() {
     }
-    public int getId() {
+    public String getId() {
         return this.id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
     public String getNama() {
