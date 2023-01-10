@@ -45,10 +45,5 @@ public class MainScreen extends JFrame {
         m.setVisible(true);
 
     }
-    private void event(){
-        TextFieldUssername.addActionListener((e)->{
-
-        }
-        );}
 
 }
