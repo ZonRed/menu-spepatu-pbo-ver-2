@@ -16,9 +16,12 @@ public class AdminModel {
         return arrayAdmin;
     }
 
-    public static AdminEntity cari(int id){
+    public static AdminEntity cari(int id,String pass){
         for(AdminEntity objectAdmin : arrayAdmin){
-            if(objectAdmin.getId()==id){
+            if(objectAdmin.getId()==id&&objectAdmin.getPassword().equals(pass)){
+                return objectAdmin;
+            }
+            if(objectAdmin.getPassword()==pass){
                 return objectAdmin;
             }
         }

@@ -15,7 +15,7 @@ public class AdminController {
         adminView.login();
     }
     public boolean cari(int id,String pass){
-        AdminEntity admin = AdminModel.cari(id);
+        AdminEntity admin = AdminModel.cari(id,pass);
         if(admin!=null){
             return true;
         }else{
