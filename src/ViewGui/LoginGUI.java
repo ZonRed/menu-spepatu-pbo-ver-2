@@ -10,10 +10,11 @@ import java.awt.event.ActionListener;
 public class LoginGUI extends JFrame {
     private JPanel PanelMain;
     private JTextField TextFieldUssername;
-    private JTextField TextFieldPassword;
+    private JPasswordField passwordField;
     private JButton ButtonLogin;
     private JButton ButtonExit;
     private JLabel LOGINLabel;
+
     JLabel userLabel;
     JLabel passLabel;
     AdminController admin = new AdminController();
@@ -28,18 +29,18 @@ public class LoginGUI extends JFrame {
 
     private void createUIComponents() {
         PanelMain = new JPanel();
-        LOGINLabel = new JLabel("LOGIN TOKO SEPATU");
-        LOGINLabel.setBounds(160, 20, 200, 30);
+        LOGINLabel = new JLabel("LOGIN TOKO SEPATU KYONI");
+        LOGINLabel.setBounds(145, 20, 200, 30);
         userLabel = new JLabel("ussername");
-        userLabel.setBounds(50, 50, 200, 30);
+        userLabel.setBounds(50, 60, 200, 30);
         passLabel = new JLabel("password");
-        passLabel.setBounds(50, 100, 200, 30);
+        passLabel.setBounds(50, 110, 200, 30);
 
 
         TextFieldUssername = new JTextField();
-        TextFieldUssername.setBounds(120, 50, 200, 30);
-        TextFieldPassword = new JTextField();
-        TextFieldPassword.setBounds(120, 100, 200, 30);
+        TextFieldUssername.setBounds(120, 60, 200, 30);
+        passwordField = new JPasswordField();
+        passwordField.setBounds(120, 110, 200, 30);
         ButtonLogin = new JButton("Login");
         ButtonLogin.setBounds(140, 180, 100, 30);
         ButtonExit = new JButton("Exit");
@@ -50,7 +51,7 @@ public class LoginGUI extends JFrame {
         add(userLabel);
         add(passLabel);
         add(TextFieldUssername);
-        add(TextFieldPassword);
+        add(passwordField);
         add(ButtonLogin);
         add(ButtonExit);
 
@@ -66,7 +67,7 @@ public class LoginGUI extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String userValue = TextFieldUssername.getText();
-                String passValue = TextFieldPassword.getText();
+                String passValue = passwordField.getText();
 
                 boolean status = admin.cari(userValue, passValue);
                 if (status) {
