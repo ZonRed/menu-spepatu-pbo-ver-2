@@ -46,6 +46,14 @@ public class MenuSepatu extends JFrame {
         add(ButtonStruct);
         add(ButtonBackLogin);
 
+        ButtonDisplay.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MenuDisplay md = new MenuDisplay();
+                md.setVisible(true);
+                dispose();
+            }
+        });
         ButtonBackLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

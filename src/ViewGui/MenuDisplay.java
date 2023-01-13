@@ -1,6 +1,9 @@
 package ViewGui;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 public class MenuDisplay extends JFrame {
     private JPanel PanelMain;
     private JLabel DisplayLabel;
@@ -8,7 +11,7 @@ public class MenuDisplay extends JFrame {
     private JLabel ISI2Label;
     private JLabel ISI3Label;
     private JLabel ISI4Label;
-
+    private JButton ButtonExit;
 
 
 
@@ -34,6 +37,8 @@ public class MenuDisplay extends JFrame {
         ISI4Label = new JLabel("Harga Sepatu  = ");
         ISI4Label.setBounds(75, 180, 200, 30);
 
+        ButtonExit = new JButton("Back To Menu");
+        ButtonExit.setBounds(140, 220, 150, 30);
 
         add(PanelMain);
         add(DisplayLabel);
@@ -41,6 +46,16 @@ public class MenuDisplay extends JFrame {
         add(ISI2Label);
         add(ISI3Label);
         add(ISI4Label);
+        add(ButtonExit);
+
+        ButtonExit.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MenuSepatu ms = new MenuSepatu();
+                ms.setVisible(true);
+                dispose();
+            }
+        });
 
     }
 
