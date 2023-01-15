@@ -20,7 +20,7 @@ public class LoginGUI extends JFrame {
     AdminController admin = new AdminController();
 
     public LoginGUI() {
-        setTitle("coba");
+        setTitle("login");
         setSize(400, 300);
         setLayout(null);
         setResizable(false);
@@ -71,7 +71,7 @@ public class LoginGUI extends JFrame {
 
                 boolean status = admin.cari(userValue, passValue);
                 if (status) {
-                    MenuSepatu M = new MenuSepatu();
+                    MenuSepatuGui M = new MenuSepatuGui();
                     M.setVisible(true);
                     dispose();
                     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

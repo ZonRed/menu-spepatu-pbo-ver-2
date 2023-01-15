@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MenuSepatu extends JFrame {
+public class MenuSepatuGui extends JFrame {
     private JPanel PanelMain;
     private JLabel MenuLabel;
     private JButton ButtonDisplay;
@@ -14,8 +14,8 @@ public class MenuSepatu extends JFrame {
     private JButton ButtonBackLogin;
 
 
-    public MenuSepatu() {
-        setTitle("coba");
+    public MenuSepatuGui() {
+        setTitle("Menu Sepatu Gui");
         setSize(350, 300);
         setLayout(null);
 
@@ -49,7 +49,7 @@ public class MenuSepatu extends JFrame {
         ButtonDisplay.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                MenuDisplay md = new MenuDisplay();
+                MenuDisplayGui md = new MenuDisplayGui();
                 md.setVisible(true);
                 dispose();
             }
@@ -64,7 +64,7 @@ public class MenuSepatu extends JFrame {
         });
     }
     public static void main(String[] args) {
-        MenuSepatu ms = new MenuSepatu();
+        MenuSepatuGui ms = new MenuSepatuGui();
         ms.setVisible(true);
     }
 }

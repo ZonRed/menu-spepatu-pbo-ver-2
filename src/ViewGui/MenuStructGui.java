@@ -1,7 +1,7 @@
 package ViewGui;
 
 import javax.swing.*;
-public class MenuStruct extends JFrame {
+public class MenuStructGui extends JFrame {
     private JPanel PanelMain;
     private JLabel ISI1Label;
     private JLabel ISI2Label;
@@ -11,8 +11,8 @@ public class MenuStruct extends JFrame {
     private JLabel ISI6Label;
 
 
-    public MenuStruct() {
-        setTitle("coba");
+    public MenuStructGui() {
+        setTitle("Menu struct");
         setSize(1000, 500);
         setLayout(null);
 
@@ -49,7 +49,7 @@ public class MenuStruct extends JFrame {
     }
 
     public static void main(String[] args) {
-        MenuStruct s = new MenuStruct();
+        MenuStructGui s = new MenuStructGui();
         s.setVisible(true);
     }
 }
