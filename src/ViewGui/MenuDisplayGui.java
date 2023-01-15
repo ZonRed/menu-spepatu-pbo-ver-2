@@ -27,7 +27,7 @@ public class MenuDisplayGui extends JFrame {
     private void createUIComponents() {
         PanelMain = new JPanel();
         DisplayLabel = new JLabel ("Display");
-        DisplayLabel.setBounds(160, 20, 200, 30);
+        DisplayLabel.setBounds(240, 20, 200, 30);
         Garis1Label = new JLabel("=======================================================");
         Garis1Label.setBounds(75, 50, 400, 30);
         ISI1Label = new JLabel("Jenis Sepatu  = || sneakers1 || sneakers2 || sneakers3 ||");
