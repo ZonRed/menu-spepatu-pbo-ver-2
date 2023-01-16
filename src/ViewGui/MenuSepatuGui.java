@@ -62,6 +62,22 @@ public class MenuSepatuGui extends JFrame {
                 dispose();
             }
         });
+        ButtonBeli.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MenuBeliGui mb= new MenuBeliGui();
+                mb.setVisible(true);
+                dispose();
+            }
+        });
+        ButtonStruct.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MenuStructGui ms= new MenuStructGui();
+                ms.setVisible(true);
+                dispose();
+            }
+        });
     }
     public static void main(String[] args) {
         MenuSepatuGui ms = new MenuSepatuGui();

@@ -1,6 +1,9 @@
 package ViewGui;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 public class MenuStructGui extends JFrame {
     private JPanel PanelMain;
     private JLabel ISI1Label;
@@ -9,11 +12,12 @@ public class MenuStructGui extends JFrame {
     private JLabel ISI4Label;
     private JLabel ISI5Label;
     private JLabel ISI6Label;
+    private JButton ButtonBackToMenu;
 
 
     public MenuStructGui() {
         setTitle("Menu struct");
-        setSize(1000, 500);
+        setSize(500, 500);
         setLayout(null);
 
         createUIComponents();
@@ -35,7 +39,10 @@ public class MenuStructGui extends JFrame {
         ISI5Label = new JLabel("Bahan Sepatu yang dibeli   =");
         ISI5Label.setBounds(75, 220, 200, 30);
         ISI6Label = new JLabel("Total Harga                =");
-        ISI6Label.setBounds(75, 240, 200, 30);
+        ISI6Label.setBounds(75, 260, 200, 30);
+
+        ButtonBackToMenu = new JButton("Back To Menu");
+        ButtonBackToMenu.setBounds(140, 320, 200, 30);
 
         add(PanelMain);
         add(STRUCTLabel);
@@ -45,8 +52,18 @@ public class MenuStructGui extends JFrame {
         add(ISI4Label);
         add(ISI5Label);
         add(ISI6Label);
+        add(ButtonBackToMenu);
 
+        ButtonBackToMenu.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MenuSepatuGui ms = new MenuSepatuGui();
+                ms.setVisible(true);
+                dispose();
+            }
+        });
     }
+
 
     public static void main(String[] args) {
         MenuStructGui s = new MenuStructGui();
