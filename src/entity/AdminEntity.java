@@ -3,7 +3,7 @@ package entity;
 public class AdminEntity extends UserEntity{
     private String password;
 
-    public AdminEntity(String id, String nama, String password) {
+    public AdminEntity(int id, String nama, String password) {
         super(id, nama);
         this.password = password;
     }
