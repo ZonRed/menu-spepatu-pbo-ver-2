@@ -19,6 +19,7 @@ public class MenuStructGui extends JFrame {
         setTitle("Menu struct");
         setSize(500, 500);
         setLayout(null);
+        setResizable(false);
 
         createUIComponents();
     }
