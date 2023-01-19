@@ -17,4 +17,24 @@ public class DetailTransaksiModel {
     public static ArrayList<DetailTransaksiEntity> all(){
         return arrayData;
     }
+    public static DetailTransaksiEntity dataCari(String nama){
+        for(DetailTransaksiEntity objek : arrayData){
+            if(objek.getPengunjung().getNama().equals(nama)){
+                return objek;
+            }
+        }
+        return null;
+    }
+
+    public static int Index(String nama){
+        DetailTransaksiEntity objekData = dataCari(nama);
+        return arrayData.indexOf(objekData);
+    }
+
+    public static void hapus(String nama){
+        int index = Index(nama);
+        if (index!=-1){
+            arrayData.remove(index);
+        }
+    }
 }

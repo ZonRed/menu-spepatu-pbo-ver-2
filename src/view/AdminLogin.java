@@ -89,6 +89,8 @@ public class AdminLogin extends Frame{
             } else {
                 JOptionPane.showMessageDialog(null, "ID atau Password Salah", "Login Gagal",
                         JOptionPane.ERROR_MESSAGE);
+                new AdminLogin().setVisible(true);
+                dispose();
             }
         });
     }

@@ -24,4 +24,16 @@ public class DetailTransaksiController {
     public void beli(int id, String nama,String alamat,TransaksiEntity transaksi){
         DetailTransaksiModel.beli(new PengunjungEntity( id, nama, alamat), transaksi);
     }
+    public boolean datacari(String nama){
+         DetailTransaksiEntity data = DetailTransaksiModel.dataCari(nama);
+        if(data!=null){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    public void hapus(String nama) {
+        DetailTransaksiModel.hapus(nama);
+    }
 }
