@@ -30,10 +30,10 @@ public class AdminLogin extends Frame{
     @Override
     protected void component() {
 
-        perpusLabel = new JLabel("TOKO SEPATU");
+        perpusLabel = new JLabel("TOKO SEPATU KYONI");
         perpusLabel.setFont(new Font("Arial", Font.BOLD, 24));
         perpusLabel.setForeground(color("#2596be"));
-        boundedAdd(perpusLabel, 110, 265, 200, 45);
+        boundedAdd(perpusLabel, 70, 265, 300, 45);
 
         loginLabel = new JLabel("LOGIN ADMIN");
         loginLabel.setFont(new Font("Arial", Font.BOLD, 20));
