@@ -17,22 +17,22 @@ public class DetailTransaksiModel {
     public static ArrayList<DetailTransaksiEntity> all(){
         return arrayData;
     }
-    public static DetailTransaksiEntity dataCari(String nama){
+    public static DetailTransaksiEntity dataCari(int id){
         for(DetailTransaksiEntity objek : arrayData){
-            if(objek.getPengunjung().getNama().equals(nama)){
+            if(objek.getPengunjung().getId() == id){
                 return objek;
             }
         }
         return null;
     }
 
-    public static int Index(String nama){
-        DetailTransaksiEntity objekData = dataCari(nama);
+    public static int Index(int id){
+        DetailTransaksiEntity objekData = dataCari(id);
         return arrayData.indexOf(objekData);
     }
 
-    public static void hapus(String nama){
-        int index = Index(nama);
+    public static void hapus(int id){
+        int index = Index(id);
         if (index!=-1){
             arrayData.remove(index);
         }

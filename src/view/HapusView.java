@@ -11,7 +11,7 @@ import java.awt.Font;
 public class HapusView extends Frame{
 
     private JLabel namaLabel;
-    private JTextField namaField;
+    private JTextField idField;
 
 
     private JButton Hapus,keluar;
@@ -22,12 +22,12 @@ public class HapusView extends Frame{
 
     @Override
     protected void component() {
-        namaLabel = new JLabel("Nama Pengunjung");
+        namaLabel = new JLabel("ID Pengunjung");
         namaLabel.setFont(new Font("Arial", Font.BOLD, 13));
         boundedAdd(namaLabel, 50, 30, 150, 18);
 
-        namaField = new JTextField();
-        boundedAdd(namaField, 50, 55, 150, 30);
+        idField = new JTextField();
+        boundedAdd(idField, 50, 55, 150, 30);
 
 
         Hapus = new JButton("Hapus");
@@ -46,22 +46,22 @@ public class HapusView extends Frame{
     @Override
     protected void event() {
         Hapus.addActionListener((e) -> {
-            String nama = namaField.getText();
+            int id = Integer.parseInt(String.valueOf(idField.getText()));
 
             DetailTransaksiController transaksi = new DetailTransaksiController();
-            boolean objek = transaksi.datacari(nama);
+            boolean objek = transaksi.datacari(id);
             if (objek) {
-                transaksi.hapus(nama);
+                transaksi.hapus(id);
                 JOptionPane.showMessageDialog(null, "Berhasil Hapus",
                         "hapus", JOptionPane.INFORMATION_MESSAGE);
                 new HapusView().setVisible(true);
                 dispose();
             } else {
                 JOptionPane.showMessageDialog(null,
-                        "nama" + nama + "tidak ada",
-                        "gagal hapus",
+                        "ID " + id + " tidak ada",
+                        "ID gagal hapus",
                         JOptionPane.ERROR_MESSAGE);
-                System.out.println("nama" + nama + "tidak di temukan");
+                System.out.println("ID " + id + " tidak di temukan");
                 new HapusView().setVisible(true);
                 dispose();
             }
