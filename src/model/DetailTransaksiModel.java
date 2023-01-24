@@ -37,4 +37,7 @@ public class DetailTransaksiModel {
             arrayData.remove(index);
         }
     }
+    public static void hapusSemua() {
+        arrayData.clear();
+    }
 }

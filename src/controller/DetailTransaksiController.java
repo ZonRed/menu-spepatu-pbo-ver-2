@@ -36,4 +36,8 @@ public class DetailTransaksiController {
     public void hapus(int id) {
         DetailTransaksiModel.hapus(id);
     }
+    public void hapusSemua() {
+        DetailTransaksiModel.hapusSemua();
+    }
+
 }
